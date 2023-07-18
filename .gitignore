@@ -1,5 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+#ng build --output-path docs --base-href my_portfolio
+
 # Compiled output
 /dist
 /tmp
