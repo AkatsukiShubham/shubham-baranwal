@@ -1,0 +1,43 @@
+.social-sites {
+  bottom: 0rem;
+}
+
+.email-address {
+  bottom: 0;
+  right: 3rem;
+  .email-address-label {
+    color: var(--grey-2);
+    writing-mode: vertical-rl;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    letter-spacing: 0.08rem;
+  }
+}
+
+.email-address-label:hover {
+  color: var(--green) !important;
+  transform: translateY(-0.2rem);
+}
+
+.social-sites::after,
+.email-address::after {
+  content: "";
+  display: block;
+  width: 0.1rem;
+  height: 8rem;
+  margin: 0px auto;
+  background-color: var(--grey-2);
+}
+
+.email-address::after {
+  height: 5.5rem !important;
+}
+
+svg {
+  fill: var(--grey-2);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+svg:hover {
+  fill: var(--green);
+  transform: translateY(-0.2rem);
+}

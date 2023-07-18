@@ -1,0 +1,85 @@
+.company-name {
+  color: var(--green);
+  transition: var(--transition);
+}
+
+.company-name:hover::after {
+  width: 100%;
+}
+
+.company-name::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0.1rem;
+  position: relative;
+  bottom: -0.2rem;
+  background-color: var(--green);
+  opacity: 0.5;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+::ng-deep .mat-ripple-element {
+  position: absolute;
+}
+
+::ng-deep .mat-tab-label {
+  color: var(--grey-2);
+  border-bottom: 2px solid;
+  padding: 1rem !important;
+  justify-content: flex-start !important;
+  flex: 1 1 auto !important;
+  opacity: 1 !important;
+}
+
+::ng-deep .mat-tab-label-active {
+  color: var(--green);
+  border-bottom: 2px solid;
+  background-color: #112240;
+}
+
+::ng-deep
+  .mat-tab-header-pagination-controls-enabled
+  .mat-tab-header-pagination,
+::ng-deep .mat-ink-bar {
+  display: none !important;
+}
+
+::ng-deep .mat-tab-label .mat-tab-label-content {
+  letter-spacing: 0.05rem;
+}
+
+::ng-deep .mat-tab-body-content {
+  overflow: hidden !important;
+  padding-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  ::ng-deep .mat-tab-label {
+    border-bottom: none;
+    border-left: 2px solid;
+  }
+
+  ::ng-deep .mat-tab-label-active {
+    border-bottom: none;
+    border-left: 2px solid;
+  }
+
+  ::ng-deep .mat-tab-labels {
+    flex-direction: column;
+    font-size: 0.9rem;
+    margin-right: 2rem;
+  }
+
+  ::ng-deep .mat-tab-label:hover {
+    background-color: #112240;
+  }
+
+  .tab-group {
+    flex-direction: row !important;
+  }
+
+  ::ng-deep .mat-tab-body-content {
+    padding-top: 0rem;
+  }
+}

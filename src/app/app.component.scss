@@ -1,0 +1,27 @@
+.router-outlet {
+  padding: 0rem 15rem;
+}
+
+@media (max-width: 1280px) {
+  .router-outlet {
+    padding: 0rem 8rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .router-outlet {
+    padding: 0rem 6rem;
+  }
+}
+
+@media (max-width: 1060px) {
+  .router-outlet {
+    padding: 0rem 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .router-outlet {
+    padding: 0rem 2rem;
+  }
+}

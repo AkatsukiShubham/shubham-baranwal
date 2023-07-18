@@ -1,0 +1,79 @@
+<section
+  class="section-margin h-100 mx-lg-5 pt-lg-4 d-flex align-items-center justify-content-center flex-column"
+  id="About"
+>
+  <div
+    class="container-fluid d-flex align-items-center justify-content-center flex-column"
+  >
+    <div class="row">
+      <div class="d-flex tabs-header">
+        <span class="text-green me-2">01.</span
+        ><span class="text-grey fw-bold font-family-calibre"> About Me</span>
+      </div>
+      <div class="col-12 col-lg-8 mt-4 font-family-calibre ls-04 lh-base">
+        <div class="fs-6 text-grey-2">
+          Hello! My name is Shubham Baranwal and I enjoy creating things that
+          live on the internet. My interest in web development started back in
+          2016 when I decided to choose IT as my professional field. Back then I
+          used to work on wordpress themes and plugins which also helped me
+          designing e-commerce websites.
+        </div>
+        <div class="fs-6 text-grey-2 my-3">
+          Fast-forward to today, and I’ve had the privilege of working at a
+          <span class="text-green">
+            start-up, a SMB and a huge corporation which has also developed
+            websites like COWIN(A website made for covid-19).</span
+          >
+        </div>
+        <div class="fs-6 text-grey-2">
+          I am also planning to launch a frontend course that will cover
+          everything which will help developers to build web applications as
+          well as mobile applications using angular and ionic.
+        </div>
+        <div class="my-3">
+          <div class="fs-6 text-grey-2">
+            Here are few of my skills and technologies which I am working with
+            recently:
+          </div>
+          <div class="row mt-2 font-family-mono ls-04 fs-08">
+            <div class="col-6">
+              <div
+                class="d-flex align-items-center py-1"
+                *ngFor="let item of skillsArrayLeft"
+              >
+                <i
+                  class="fa-solid fa-play me-3 fs-05"
+                  style="color: #64ffda"
+                ></i>
+                <span class="text-grey-2 fw-light">{{ item?.value }}</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div
+                class="d-flex align-items-center py-1"
+                *ngFor="let item of skillsArrayRight"
+              >
+                <i
+                  class="fa-solid fa-play me-3 fs-05"
+                  style="color: #64ffda"
+                ></i>
+                <span class="text-grey-2 fw-light">{{ item?.value }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 mt-4 pe-lg-4">
+        <div class="photo-container position-relative">
+          <div class="photo-body position-relative">
+            <img
+              class="my-portfolio-photo"
+              src="../../assets/images/myProfilePhoto.jpeg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

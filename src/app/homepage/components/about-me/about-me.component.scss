@@ -1,0 +1,64 @@
+.section-margin {
+  transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
+    transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+.photo-container {
+  box-shadow: 0 10px 30px -15px var(--navy-shadow);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  width: 100%;
+  border-radius: 0.3rem;
+  background-color: var(--green);
+}
+
+.photo-container:hover {
+  outline: 0rem;
+  transform: translate(-4px, -4px);
+}
+
+.photo-container::before {
+  top: 0rem;
+  left: 0rem;
+  background-color: var(--navy);
+  mix-blend-mode: screen;
+}
+
+.photo-container::before,
+.photo-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.3rem;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.photo-container::after {
+  border: 2px solid var(--green);
+  top: 0.9rem;
+  left: 0.9rem;
+  z-index: -1;
+}
+
+.photo-container:hover::after {
+  transform: translate(0.5rem, 0.5rem);
+}
+
+.photo-container .photo-body {
+  border-radius: 0.3rem;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%) contrast(1);
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.photo-container:hover .photo-body,
+.photo-container:focus .photo-body {
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+.photo-body img {
+  width: 100%;
+  border-radius: 0.3rem;
+}

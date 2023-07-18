@@ -1,0 +1,77 @@
+<div
+  class="d-flex align-items-center justify-content-between me-5 position-fixed w-100 header-body pt-3"
+  [ngClass]="{ 'hide-header-animation': windowScrolled }"
+>
+  <div class="cursor-pointer ms-3" data-aos="zoom-in" data-aos-duration="1000">
+    <img
+      src="assets/images/headerLogo.png"
+      style="width: calc(2.5rem - -2.5vw)"
+    />
+  </div>
+
+  <ul class="header-tabs d-none d-md-flex align-items-center me-3">
+    <li
+      class="mx-3 fs-09 fw-600 ls-04 cursor-pointer"
+      *ngFor="let item of headerTabs"
+      data-aos="fade-down"
+      [attr.data-aos-duration]="
+        item?.value == 01
+          ? 1000
+          : item?.value == 02
+          ? 1200
+          : item?.value == 03
+          ? 1400
+          : 1600
+      "
+    >
+      <a [href]="'#' + item?.label" class="text-decoration-none">
+        <span class="mr-2 text-green">{{ item?.value }}.</span>
+        <span class="text-grey-2"> {{ item?.label }}</span></a
+      >
+    </li>
+
+    <a
+      data-aos="fade-down"
+      data-aos-duration="1800"
+      class="text-decoration-none px-3 py-2 border-green rounded mx-3 fs-09 fw-600 ls-04"
+      href="/assets/shubham_baranwal_resume.pdf"
+      target="_blank"
+      download
+      >Resume</a
+    >
+  </ul>
+
+  <div class="hamburger-menu d-md-none font=family-mono">
+    <input
+      id="menu-toggle"
+      type="checkbox"
+      (click)="hideMobileMenu(false)"
+      [checked]="!hideMenu"
+    />
+    <label class="menu-btn position-fixed" for="menu-toggle">
+      <span></span>
+    </label>
+
+    <ul
+      class="menu-box position-fixed w-75 h-100 pt-5 mt-5"
+      [ngClass]="{ 'hide-menu': hideMenu }"
+    >
+      <li *ngFor="let item of headerTabs" (click)="hideMobileMenu(true)">
+        <a class="menu-item d-block py-3" [href]="'#' + item?.label">
+          <span class="mr-2 text-green">{{ item?.value }}.</span>
+          <span class="text-grey-2"> {{ item?.label }}</span></a
+        >
+      </li>
+
+      <a
+        data-aos="fade-down"
+        data-aos-duration="1800"
+        class="d-flex align-items-center justify-content-center mt-3 text-decoration-none px-3 py-2 border-green rounded mx-3 fs-09 fw-600 ls-04"
+        href="/assets/shubham_baranwal_resume.pdf"
+        target="_blank"
+        download
+        >Resume</a
+      >
+    </ul>
+  </div>
+</div>
