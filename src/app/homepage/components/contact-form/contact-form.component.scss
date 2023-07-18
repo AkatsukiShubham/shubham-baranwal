@@ -25,3 +25,14 @@ svg:hover {
   color: var(--green);
   fill: var(--green);
 }
+
+@media (min-width: 768px) {
+  .text-grey-2 {
+    width: 35rem;
+  }
+
+  .desktop-view {
+    position: absolute;
+    bottom: 2rem;
+  }
+}

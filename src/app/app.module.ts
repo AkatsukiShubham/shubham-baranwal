@@ -9,6 +9,7 @@ import { HomepageModule } from './homepage/homepage.module';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MyWorkplaceComponent } from './homepage/components/my-workplace/my-workplace.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,13 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MyWorkplaceComponent,
     SidebarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HomepageModule, MatTabsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HomepageModule,
+    MatTabsModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
